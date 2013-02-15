@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de" manifest="phone.appcache">
+<head>
+
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+   <link rel="apple-touch-icon" href="phone57x57.png"/>
+   <link rel="apple-touch-startup-image" href="phone.png" />
+
+   <title>Telefonliste</title>
+
+   <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+   <link rel="stylesheet" href="phone.css"/>
+
+   <script src="./libs/jquery-1.7.2.min.js"></script>
+   <script src="./libs/jquery.mobile-1.2.0.min.js"></script>
+   <script src="phone.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- page phonelist -->
+<div data-role="page" id="phonelist">
+
+   <div data-theme="a" data-role="header">
+      <span class="ui-title">Telefonliste</span>
+   </div>
+
+   <div data-role="content">
+      <ul id="phoneListEntries" data-role="listview" data-divider-theme="b" data-inset="true" data-filter="true">
+      </ul>
+   </div>
+</div>
+
+
+<!-- page phone_entry -->
+<div data-role="page" id="phone_entry">
+
+   <div data-theme="a" data-role="header">
+      <span class="ui-title">Telefonliste</span>
+   </div>
+
+   <div data-role="content" id="entry_content">
+
+      <h2>Name</h2>          <span id="name"></span>
+      <h2>Telefonnummer</h2> <span><a id="number"  href=""></a></span>
+      <h2>Mobil</h2>         <span><a  id="mobile" href=""></a></span>
+
+      <div data-role="navbar" data-iconpos="top">
+         <ul> <li> <a href="#phonelist" data-transition="slide" data-theme="" data-icon="back">Zurück</a></li></ul>
+      </div>
+   </div>
+</div>
+
+</body>
+</html>

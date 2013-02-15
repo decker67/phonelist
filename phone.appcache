@@ -1,0 +1,21 @@
+CACHE MANIFEST
+#2013-02-14 V0.6
+
+NETWORK:
+
+
+CACHE:
+libs/jquery-1.7.2.min.js
+libs/jquery.mobile-1.2.0.min.js
+css/jquery.mobile-1.2.0.min.css
+css/images/ajax-loader.gif
+css/images/icons-18-black.png
+css/images/icons-18-white.png
+css/images/icons-36-black.png
+css/images/icons-36-white.png
+phone57x57.png
+phone.png
+phone.css
+phone.html
+phone.js
+phonelist.json
