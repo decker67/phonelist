@@ -6,8 +6,16 @@ jquery mobule code to implement the phonelist
 
 //-----------------------------------------------------------------------------------------------------------
 var phoneList     = null,
-    selectedEntry = null,
-    numberPrefix = '0241 559709-';
+    selectedEntry = null;
+//-----------------------------------------------------------------------------------------------------------
+
+function addEntriesFromPhonelist( uiElement, list) {
+   var category = null;
+   for ( category in list ) {
+      addDivider( uiElement, category );
+      addList( uiElement, list[ category ], category );
+   }
+}
 
 //-----------------------------------------------------------------------------------------------------------
 
@@ -19,10 +27,9 @@ function addDivider( ulElement, name ) {
 
 //-----------------------------------------------------------------------------------------------------------
 
-function addList( ulElement, phoneList, category ) {
+function addList( ulElement, list, category ) {
    var listItem = null,
-       i = null,
-       list = phoneList[ category ];
+       i = null;
 
    for( i = 0; i < list.length; i++ ) {
       listItem = '<li data-entry-id="' + category + '-' + i +
@@ -42,16 +49,12 @@ $( '#phonelist' ).live( "pagebeforecreate", function() {
    } ).done( function( phoneListAsJson ) {
          phoneList = phoneListAsJson;
          var ulElement = $( '#phoneListEntries' );
-         addDivider( ulElement, 'Festangestellte' );
-         addList( ulElement, phoneList, 'employees' );
-         addDivider( ulElement, 'Hiwis' );
-         addList( ulElement, phoneList, 'hiwis' );
+         addEntriesFromPhonelist( ulElement, phoneList );
 
          //handle selection of entry
-         ulElement.delegate('li', 'click', function( clickedItem ) {
-            //console.log( clickedItem );
-            selectedEntry = $(this).get(0).getAttribute( 'data-entry-id' );
-            //console.log( selectedEntry );
+         ulElement.delegate('li', 'click', function( event ) {
+            event.stopPropagation();
+            selectedEntry = event.currentTarget.getAttribute( 'data-entry-id' );
          });
          ulElement.listview( 'refresh' );
       } );
@@ -59,15 +62,19 @@ $( '#phonelist' ).live( "pagebeforecreate", function() {
 
 
 $( '#phone_entry' ).live( "pagebeforeshow", function() {
-   var id = selectedEntry.split('-'),
-       phoneListEntry = phoneList[ id[ 0 ] ][ id[ 1 ] ];
+   if( selectedEntry ) {
+       var id = selectedEntry.split('-'),
+           phoneListEntry = phoneList[ id[ 0 ] ][ id[ 1 ] ];
 
-   $( '#name' ).html( phoneListEntry.userName );
-   $( '#number' ).html( numberPrefix + phoneListEntry.userNumber );
-   $( '#number' ).prop( 'href', 'tel:' + numberPrefix + phoneListEntry.userNumber );
-   $( '#mobile' ).html( phoneListEntry.userMobile || '-' );
-   if( phoneListEntry.userMobile ) {
-      $( '#mobile' ).prop( 'href', 'tel:' + phoneListEntry.userMobile );
+       $( '#name' ).html( phoneListEntry.userName );
+       $( '#number' ).html( phoneListEntry.userNumber );
+       $( '#number' ).prop( 'href', 'tel:' + phoneListEntry.userNumber );
+       $( '#mobile' ).html( phoneListEntry.userMobile || '-' );
+       if( phoneListEntry.userMobile ) {
+          $( '#mobile' ).prop( 'href', 'tel:' + phoneListEntry.userMobile );
+       }
+   } else {
+       $.mobile.changePage( '#phonelist' );
    }
 } );
 

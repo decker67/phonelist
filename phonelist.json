@@ -1,0 +1,18 @@
+{
+   "Festangestellte": [
+      {
+         "user": "short name",
+         "userName": "long name",
+         "userNumber": "number",
+         "userMobile": "mobile number"
+      }
+   ],
+   "Hiwis": [
+      {
+      "user": "short name",
+      "userName": "long name",
+      "userNumber": "number",
+      "userMobile": "mobile number"
+      }
+   ]
+}
