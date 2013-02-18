@@ -1,3 +1,5 @@
+This is my first jquery mobile project that implements a simple phonelist for a mobile device.
+
 A phonelist.json is required in the root of the project. It should contain phone numbers using the following structure:
 
 {
