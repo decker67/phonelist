@@ -1,41 +1,6 @@
 /*
- <table class="defaultTable evenOdd wikitable" style="width: 100%;">
- <tr>
- <th>Kürzel</th>
- <th>Festangestellte</th>
- <th colspan="2">Durchwahl + Mobil</th>
- </tr>
-
- <tr>
- <td style="padding:0px 12px;">AGO</td>
- <td style="padding:0px 12px;"><a href="/index.php/Benutzer:Achim_G%C3%B6ttgens" title="Benutzer:Achim Göttgens">Achim Göttgens</a></td>
- <td style="padding:0px 12px;">
- <p>83
- </p>
- </td>
- <td style="padding:0px 12px;">
- </td>
- </tr>
-
- <tr>
- <td style="padding:0px 12px;">AWI</td>
- <td style="padding:0px 12px;"><a href="/index.php/Benutzer:Alexander_Wilden" title="Benutzer:Alexander Wilden">Alexander Wilden</a></td>
- <td style="padding:0px 12px;">
- <p>86
- </p>
- </td>
- <td style="padding:0px 12px;">
- </td>
- </tr>
-
- <tr>
- <td style="padding:0px 12px;">ANW</td>
- <td style="padding:0px 12px;"><a href="/index.php/Benutzer:Anke_Wirtz" title="Benutzer:Anke Wirtz">Anke Wirtz</a></td>
- <td style="padding:0px 12px;">
- <p>271
- </p>
- </td>
- */
+code to create a phonelist.json from the internal phone list page
+*/
 
 (function phone( $ ) {
 
