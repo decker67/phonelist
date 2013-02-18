@@ -1,5 +1,5 @@
 /*
-code to create a phonelist.json from the internal phone list page
+jquery mobule code to implement the phonelist
 */
 
 (function phone( $ ) {
