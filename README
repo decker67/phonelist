@@ -1,2 +1,24 @@
 A phonelist.json is required in the root of the project. It should contain phone numbers using the following structure:
 
+{
+    "employees": [
+        {
+            "user": "short name",
+            "userName": "long name",
+            "userNumber": "number",
+            "userMobile": "mobile number"
+        },
+...
+
+
+ ],
+    "hiwis": [
+        {
+            "user": "short name",
+            "userName": "long name",
+            "userNumber": "number",
+            "userMobile": "mobile number"
+        },
+...
+    ]
+}
