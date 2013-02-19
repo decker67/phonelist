@@ -3,10 +3,10 @@ This is my first jquery mobile project that implements a simple phonelist for a 
 A phonelist.json is required in the root of the project. It should contain phone numbers using the following structure:
 
 {
-    "employees": [
+    "category": [
         {
-            "user": "short name",
-            "userName": "long name",
+            "user": "short name of user",
+            "userName": "long name of user",
             "userNumber": "number",
             "userMobile": "mobile number"
         },
@@ -14,10 +14,10 @@ A phonelist.json is required in the root of the project. It should contain phone
 
 
  ],
-    "hiwis": [
+    "another category": [
         {
-            "user": "short name",
-            "userName": "long name",
+            "user": "short name of another user",
+            "userName": "long name of another user",
             "userNumber": "number",
             "userMobile": "mobile number"
         },
