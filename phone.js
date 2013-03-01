@@ -52,7 +52,7 @@ $( '#phonelist' ).live( "pagebeforecreate", function() {
          addEntriesFromPhonelist( ulElement, phoneList );
 
          //handle selection of entry
-         ulElement.delegate('li', 'click', function( event ) {
+         ulElement.delegate('li', 'tap', function( event ) {
             event.stopPropagation();
             selectedEntry = event.currentTarget.getAttribute( 'data-entry-id' );
          });
