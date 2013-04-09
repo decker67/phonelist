@@ -44,10 +44,10 @@ function extractTableData( tableRow ) {
     });*/
 
    return {
-      'user':       user,
-      'userName':   userName,
-      'userNumber': userNumber,
-      'userMobile': userMobile
+      'shortName':    user,
+      'name':         userName,
+      'firstNumber':  userNumber,
+      'secondNumber': userMobile
    };
 }
 

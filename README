@@ -5,10 +5,10 @@ A phonelist.json is required in the root of the project. It should contain phone
 {
     "category": [
         {
-            "user": "short name of user",
-            "userName": "long name of user",
-            "userNumber": "number",
-            "userMobile": "mobile number"
+            "shortName":    "short name of a user",
+            "name":         "long name of a user",
+            "firstNumber":  "number",
+            "secondNumber": "number"
         },
 ...
 
@@ -16,10 +16,10 @@ A phonelist.json is required in the root of the project. It should contain phone
  ],
     "another category": [
         {
-            "user": "short name of another user",
-            "userName": "long name of another user",
-            "userNumber": "number",
-            "userMobile": "mobile number"
+            "shortName":    "short name of another user",
+            "name":         "long name of another user",
+            "firstNumber":  "number",
+            "secondNumber": "number"
         },
 ...
     ]

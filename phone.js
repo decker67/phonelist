@@ -34,7 +34,7 @@ function addList( ulElement, list, category ) {
    for( i = 0; i < list.length; i++ ) {
       listItem = '<li data-entry-id="' + category + '-' + i +
          '" data-theme="c"><a href="#phone_entry" data-transition="slide">' +
-         list[ i ].userName + ' (' + list[ i ].user + ') <br>' + list[ i ].userNumber + '</a></li>';
+         list[ i ].name + ' (' + list[ i ].shortName + ') <br>' + list[ i ].firstNumber + '</a></li>';
       ulElement.append( listItem );
    }
 }
@@ -66,12 +66,12 @@ $( '#phone_entry' ).live( "pagebeforeshow", function() {
        var id = selectedEntry.split('-'),
            phoneListEntry = phoneList[ id[ 0 ] ][ id[ 1 ] ];
 
-       $( '#name' ).html( phoneListEntry.userName );
-       $( '#number' ).html( phoneListEntry.userNumber );
-       $( '#number' ).prop( 'href', 'tel:' + phoneListEntry.userNumber );
-       $( '#mobile' ).html( phoneListEntry.userMobile || '-' );
-       if( phoneListEntry.userMobile ) {
-          $( '#mobile' ).prop( 'href', 'tel:' + phoneListEntry.userMobile );
+       $( '#name' ).html( phoneListEntry.name );
+       $( '#number' ).html( phoneListEntry.firstNumber );
+       $( '#number' ).prop( 'href', 'tel:' + phoneListEntry.firstNumber );
+       $( '#mobile' ).html( phoneListEntry.secondNumber || '-' );
+       if( phoneListEntry.secondNumber ) {
+          $( '#mobile' ).prop( 'href', 'tel:' + phoneListEntry.secondNumber );
        }
    } else {
        $.mobile.changePage( '#phonelist' );
