@@ -78,4 +78,5 @@ $( '#phone_entry' ).live( "pagebeforeshow", function() {
    }
 } );
 
+   window.scrollTo( 0, 1 );
 })( $ );

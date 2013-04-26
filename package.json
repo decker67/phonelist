@@ -1,0 +1,9 @@
+{
+   "name": "createPhoneList",
+   "version": "0.0.1",
+   "author": "dirk.ecker@aixigo.de",
+   "description": "A simple nodejs script to parse the internal phonelist and create a json.",
+   "dependencies" : {
+      "jquery"   :  "*"
+   }
+}
